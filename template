@@ -1,0 +1,77 @@
+│
+├── README.md                   # Project overview and usage instructions
+├── LICENSE                     # Appropriate open source license (e.g., MIT)
+├── setup.py                    # For packaging and installation
+├── requirements.txt            # Core dependencies
+├── requirements-dev.txt        # Development tools (e.g., black, pytest)
+├── pyproject.toml              # Build configuration (PEP 518)
+├── .gitignore                  # Ignore unnecessary files (data, models, venv)
+│
+├── src/                        # Source code
+│   └── cvragbot/               # Main Python package (RAG Bot)
+│       ├── __init__.py
+│       ├── config.py           # Model paths, API keys, global parameters
+│       │
+│       ├── data/               # Text loading and preprocessing
+│       │   ├── __init__.py
+│       │   ├── loader.py       # Load documents from .txt files
+│       │   └── preprocessor.py # Clean, split, and format data
+│       │
+│       ├── vectorstore/        # Vector database integrations
+│       │   ├── __init__.py
+│       │   └── embedder.py     # HuggingFace sentence-transformers embeddings
+│       │
+│       ├── models/             # LLM interaction logic
+│       │   ├── __init__.py
+│       │   └── llm_client.py   # Query llama3-8b-8192 using ChatGroq
+│       │
+│       ├── core/               # RAG pipeline logic
+│       │   ├── __init__.py
+│       │   └── rag_pipeline.py # Connects vector DB + LLM for response generation
+│       │
+│       ├── utils/              # Utility functions
+│       │   ├── __init__.py
+│       │   └── helpers.py
+│       │
+│       └── interface.py        # Streamlit chatbot interface
+│
+├── notebooks/                  # Jupyter notebooks (for exploration or demos)
+│   ├── rag_pipeline_demo.ipynb
+│   └── experiments.ipynb
+│
+├── tests/                      # Unit and integration tests
+│   ├── __init__.py
+│   ├── test_loader.py
+│   ├── test_embedder.py
+│   ├── test_llm_client.py
+│   └── test_rag_pipeline.py
+│
+├── docs/                       # Project documentation
+│   ├── usage.md                # How to run and interact with the bot
+│   ├── api.md                  # Public API documentation
+│   └── architecture.md         # System architecture and diagrams
+│
+├── data/                       # Input files (usually gitignored)
+│   ├── documents/              # Raw .txt documents for knowledge base
+│   └── README.md               # Data preparation instructions
+│
+└── models/                     # Optional: saved vector indexes, etc.
+    └── README.md               # Notes about model storage or loading
+```
+
+---
+
+### ✅ Key Features of This Template:
+
+| Section             | Description                                                |
+| ------------------- | ---------------------------------------------------------- |
+| `src/cvragbot/`     | Organized Python package following `src` layout            |
+| `data/`             | Loads and preprocesses raw `.txt` files                    |
+| `vectorstore/`      | ChromaDB with HuggingFace sentence embeddings              |
+| `models/`           | ChatGroq integration with LLaMA3-8B                        |
+| `core/`             | Main RAG pipeline combining retrieval + generation         |
+| `interface.py`      | **Streamlit UI** for chatbot interactions                  |
+| `notebooks/`        | Experiment and demo notebooks                              |
+| `docs/`             | Full documentation (usage, API, architecture)              |
+| `tests/`            | Modular unit tests (mirrors the package structure)         |
+| `requirements*.txt` | Separate files for production and development dependencies |
