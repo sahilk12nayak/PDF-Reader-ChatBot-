@@ -1,1 +1,1 @@
-# RAG-based-AI-chatbot
+# AI-chatbot-based-on-RAG
