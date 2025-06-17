@@ -39,7 +39,7 @@ rag_chatbot/
    python3 -m venv myenv
    source myenv/bin/activate
 2. Install dependencies
-   python install -r requirements.txt
+   python install -r requirement.txt
 3. Add your document
    Put your .pdf files inside the docs/ folder.
 4. Ingest documents
