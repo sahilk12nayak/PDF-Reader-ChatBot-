@@ -35,14 +35,14 @@ rag_chatbot/
 
 ## Steps:
 ```
-1. Create virtual environment
+1. Create virtual environment commands
    python3 -m venv myenv
    source myenv/bin/activate
-2. Install dependencies
+2. Install dependencies command
    python install -r requirement.txt
 3. Add your document
    Put your .pdf files inside the docs/ folder.
-4. Ingest documents
+4. Ingest documents command
    python ingest.py
 5. Set your LLM API key
    export GOOGLE_API_KEY="your-gemini-api-key"
@@ -55,5 +55,5 @@ rag_chatbot/
 ![image](https://github.com/user-attachments/assets/017b8667-320f-447c-8de7-39cc1f1e529d)
 ![image](https://github.com/user-attachments/assets/23347640-0963-4e85-8641-445559eb4a6e)
 
- License: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) — Open source. You are free to use, modify, and distribute this project, provided that you include proper attribution and comply with the license terms.
+ License: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) — Open source. 
 
